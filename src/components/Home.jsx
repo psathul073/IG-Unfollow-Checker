@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Message from './Message';
 import Icons from './Icons';
 import FileUploader from './FileUploader';
@@ -19,6 +19,14 @@ function Home() {
     const [selectFollowing, setSelectedFollowing] = useState({ status: false, name: "" });
     const [sortOrder, setSortOrder] = useState({ unfollowers: true, mutualFollowers: true });
 
+   // Preload bg-img 
+    useEffect( () => {
+        const img = new Image();
+        img.src = "https://i.postimg.cc/XvDvsF5V/bg.png";
+        img.onload = ()=> {
+            document.body.classList.add("lazy-bg");
+        };
+    },[]);
 
     function checkFollowers() {
         if (!followers.length || !following.length) {
