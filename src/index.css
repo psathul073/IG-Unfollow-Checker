@@ -1,147 +1,162 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins&family=Space+Grotesk&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins&family=Space+Grotesk&display=swap");
 
 * {
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    list-style: none;
-    text-decoration: none;
-    -webkit-tap-highlight-color: transparent;
-    
-  }
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
 
 :root {
-    --blue-glow: #45f3ff;
-    --dark-blue: #06141b;
-    --border-blue: #2988a9;
-  }
+  --blue-glow: #45f3ff;
+  --dark-blue: #06141b;
+  --border-blue: #2988a9;
+  --text-shadow: 0px 0px 15px #7eeeff, 0px 0px 50px #7eeeff;
+}
 body {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* font-family: "Space Grotesk", sans-serif; */
-    font-family: "Bruno Ace SC", sans-serif;
-    /* font-family: "Poppins", sans-serif; */
-    margin: 0;
-    background-color: #000000;
-    z-index: 0;
-    overflow: hidden;
-    transition: background-image 0.5s ease-in-out;
-  }
-  body.lazy-bg{
-    background-image:  url("https://i.postimg.cc/XvDvsF5V/bg.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-   ::-webkit-scrollbar{
-    width: 0px;
-  }
- .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 96dvh;
-    width: 96dvw;
-    gap: 20px;
-    padding: 6px 20px;
-    border-radius: 8px;
-    overflow-y: hidden;
-    background-color: var(--blue-glow);
-    background: rgba(69, 243, 255, 0.07);
-    box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
-    backdrop-filter: blur(5px);
-  }
-
-  .container .header{
-    width: fit-content;
-    margin-top: 20px;
-    padding: 6px 12px;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: "Bruno Ace SC", sans-serif;
-    background-color: var(--blue-glow);
-    color: var(--blue-glow);
-    background: rgba(69, 243, 255, 0.07);
-    box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
-    backdrop-filter: blur(5px);
-  }
-  .upload-container{
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-top: 50px;
-  }
-  .upload-container .upload{
-    display: flex;
-    gap: 15px;
-  }
-
-  .upload #followersFile, .upload #followingFile {
-    display: none;
-  }
-
-  .upload-container .upload label{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 8px;
-    border-radius: 15px 0 15px 0;
-    font-family: "Space Grotesk", sans-serif;
-    background-color: var(--blue-glow);
-    color: var(--blue-glow);
-    background: rgba(69, 243, 255, 0.07);
-    box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
-    backdrop-filter: blur(5px);
-    cursor: pointer;
-  }
-
-  .upload-container .upload label .icon{
-    font-size: 3rem;
-  }
-  .upload-container  button{
-    border-radius: 0px 15px 0 15px;
-    padding: 6px 8px;
-    font-size: 1.1rem;
-    font-family: "Space Grotesk", sans-serif;
-    background-color: var(--blue-glow);
-    color: var(--blue-glow);
-    background: rgba(69, 243, 255, 0.07);
-    box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
-    backdrop-filter: blur(5px);
-    cursor: pointer;
-  }
-
-.table-section{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-    height:100%;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-family: "Space Grotesk", sans-serif; */
+  font-family: "Bruno Ace SC", sans-serif;
+  /* font-family: "Poppins", sans-serif; */
+  margin: 0;
+  background-color: #000000;
+  z-index: 0;
+  overflow: hidden;
+  transition: background-image 0.5s ease-in-out;
+}
+body.lazy-bg {
+  background-image: url("https://i.postimg.cc/XvDvsF5V/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+::-webkit-scrollbar {
+  width: 0px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 96dvh;
+  width: 96dvw;
+  gap: 20px;
+  padding: 6px 20px;
+  border-radius: 8px;
+  overflow-y: hidden;
+  background-color: var(--blue-glow);
+  background: rgba(69, 243, 255, 0.07);
+  box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
+  backdrop-filter: blur(5px);
 }
 
-.table-section .unfollowers, .table-section .mutalFollowers{
-    position: relative;
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    touch-action: pan-y;
-    pointer-events: all;
-    width: 600px;
+.container .header {
+  width: fit-content;
+  margin-top: 20px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: "Bruno Ace SC", sans-serif;
+  background-color: var(--blue-glow);
+  color: var(--blue-glow);
+  background: rgba(69, 243, 255, 0.07);
+  box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
+  backdrop-filter: blur(5px);
 }
-.table-section .search-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-    padding: 4px;
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 0.9rem;
+.upload-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 50px;
+}
+.upload-container .upload {
+  display: flex;
+  gap: 15px;
+}
+
+.upload #followersFile,
+.upload #followingFile {
+  display: none;
+}
+
+.upload-container .upload label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(0.8rem, 4vw, 1rem);
+  padding: 22px 27px;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--blue-glow);
+  border-image-source: url("border_main.png");
+  border-image-slice: 3 6 fill;
+  border-image-width: 3px 6px;
+  border-image-outset: 0px;
+  /* background-color: var(--blue-glow);
+    background: rgba(69, 243, 255, 0.07);
+    box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
+    backdrop-filter: blur(5px); */
+  cursor: pointer;
+}
+
+.upload-container .upload label .icon {
+  font-size: 3rem;
+}
+.upload-container .upload label .icon:hover{
+ filter: drop-shadow(0 0 15px #7eeeff);
+}
+.upload-container button {
+  border-radius: 0px 15px 0 15px;
+  padding: 6px 8px;
+  font-size: 1.1rem;
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--blue-glow);
+  background-color: transparent;
+  /* background-color: var(--blue-glow);
+    background: rgba(69, 243, 255, 0.07);
+    box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
+    backdrop-filter: blur(5px); */
+  cursor: pointer;
+}
+.btn-type-1 {
+  border-image-source: url("btn-type.png");
+  border-image-slice: 13 fill;
+  border-image-width: 13px;
+  border-image-outset: 4px;
+}
+
+.table-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.table-section .unfollowers,
+.table-section .mutalFollowers {
+  position: relative;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  touch-action: pan-y;
+  pointer-events: all;
+  width: 600px;
+}
+.table-section .search-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 4px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 0.9rem;
 }
 
 .table-section .search-section h3 {
@@ -151,29 +166,38 @@ body {
   height: 40px;
   padding: 6px 12px;
   margin-bottom: 4px;
-  clip-path: polygon(1.5% 0%, 100% 0%, 100% 0%, 100% 0%, 94% 100%, 1.5% 100%, 0% 86%, 0% 15%);
+  clip-path: polygon(
+    1.5% 0%,
+    100% 0%,
+    100% 0%,
+    100% 0%,
+    94% 100%,
+    1.5% 100%,
+    0% 86%,
+    0% 15%
+  );
   color: var(--blue-glow);
   background-color: #45e3ff4b;
   backdrop-filter: blur(2px);
 }
 
-.table-section  .search-section .search-input{
-    display: flex;
-    gap: 5px;
+.table-section .search-section .search-input {
+  display: flex;
+  gap: 5px;
 }
-.search-section .search-input input{
-    width: 100%;
-    padding: 8px 12px;
-    font-size: 1rem;
-    color: var(--blue-glow);
-    background: rgba(69, 243, 255, 0.07);
-    box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
-    backdrop-filter: blur(5px);
+.search-section .search-input input {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  color: var(--blue-glow);
+  background: rgba(69, 243, 255, 0.07);
+  box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
+  backdrop-filter: blur(5px);
 }
-.search-section .search-input input::placeholder{
+.search-section .search-input input::placeholder {
   color: var(--blue-glow);
 }
-.search-section .search-input button{
+.search-section .search-input button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -186,16 +210,19 @@ body {
   cursor: pointer;
 }
 
-.table-section .unfollowers #unfollowersTable, .mutalFollowers #mutualFollowersTable {
+.table-section .unfollowers #unfollowersTable,
+.mutalFollowers #mutualFollowersTable {
   width: 100%;
-  height: calc(100%  + 2px);
-  display:block;
+  height: calc(100% + 2px);
+  display: block;
   padding: 4px;
   margin-top: 10px;
-  
 }
 
- #unfollowersTable #unfollowersHeader, #mutualFollowersTable #mutualFollowersHeader, thead ,tr  {
+#unfollowersTable #unfollowersHeader,
+#mutualFollowersTable #mutualFollowersHeader,
+thead,
+tr {
   display: inline-block;
   width: 100%;
   height: 35px;
@@ -215,18 +242,17 @@ tbody {
   width: 100%;
   overflow: auto;
 }
-tbody::-webkit-scrollbar{
+tbody::-webkit-scrollbar {
   width: 0px;
 }
-tbody  tr {
+tbody tr {
   position: relative;
   width: 100%;
   height: 40px;
   margin: 4px 0;
   background-color: transparent;
-  
 }
-tbody td{
+tbody td {
   position: absolute;
   top: 0;
   right: 0;
@@ -242,30 +268,37 @@ tbody td{
   backdrop-filter: blur(2px);
   cursor: pointer;
 }
-.new-unfollower, #unfollowersHeader span {
+.new-unfollower,
+#unfollowersHeader span {
   color: #b8faff;
   font-weight: bold;
 }
 
-.container .instruction{
-  padding: 8px;
+.container .instruction {
+  padding: 40px 30px;
   border-radius: 6px;
   font-weight: bolder;
   color: var(--blue-glow);
-  background: rgba(69, 243, 255, 0);
-  box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
-  backdrop-filter: blur(5px);
+  /* background: rgba(69, 243, 255, 0);
+  box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow); */
+  /* backdrop-filter: blur(5px); */
 }
-.container .instruction h1{
-  font-family: "Poppins", sans-serif; 
+.container .instruction h1 {
+  font-family: "Poppins", sans-serif;
   font-size: 1.1rem;
 }
 
-.container .instruction ul li{
+.container .instruction ul li {
   font-family: "Space Grotesk", sans-serif;
   font-size: 0.9rem;
   font-weight: lighter;
   padding-top: 5px;
+}
+
+.panel-1 {
+  border-image-source: url("border_main.png");
+  border-image-slice: 40 30 fill;
+  border-image-width: 40px 30px;
 }
 
 .modal-overlay {
@@ -289,7 +322,7 @@ tbody td{
   backdrop-filter: blur(10px);
   padding: 8px 6px;
   border-radius: 2px;
-  width: 100%; 
+  width: 100%;
   max-width: 400px;
   text-align: center;
   opacity: 0;
@@ -298,10 +331,17 @@ tbody td{
   animation: showIn 0.4s forwards;
 }
 @keyframes showIn {
-  0%{ opacity: 0; transform: translateY(-10px);}
-  100%{ opacity: 1; transform: translateY(0px);}
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
- .modal .modal-head, .modal .export h4{
+.modal .modal-head,
+.modal .export h4 {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -311,52 +351,63 @@ tbody td{
   background: rgba(69, 243, 255, 0.274);
   box-shadow: 0 0 2px var(--blue-glow), inset 0 0 2px var(--blue-glow);
   backdrop-filter: blur(2px);
- }
-.modal .modal-head button{
+}
+.modal .modal-head button {
   font-size: 1.4rem;
   padding-top: 4px;
   align-content: center;
   color: var(--blue-glow);
   background-color: transparent;
   cursor: pointer;
- }
- .modal .username{
+}
+.modal .username {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 4px 0;
   padding: 4px 6px;
-  font-family: "Poppins", sans-serif; 
- }
- .modal .username .buttons, .export  .buttons {
+  font-family: "Poppins", sans-serif;
+}
+.modal .username .buttons,
+.export .buttons {
   display: flex;
   align-items: center;
   gap: 15px;
- }
- .modal .username .buttons button, .export .buttons button{
+}
+.modal .username .buttons button,
+.export .buttons button {
   background-color: transparent;
   color: var(--blue-glow);
   font-size: 1.4rem;
   padding-top: 6px;
   cursor: pointer;
- }
- .modal .username .buttons button a{
+}
+.modal .username .buttons button a {
   color: currentColor;
- }
+}
 
- .modal .export{
+.modal .export {
   text-align: left;
- }
+}
 
- .modal .export .unfollowers,  .modal .export  .mutalFollowers, .modal .export .download{
+.modal .export .unfollowers,
+.modal .export .mutalFollowers,
+.modal .export .download {
   margin: 4px 0;
   padding: 0 6px;
   font-size: 0.8rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
- }
-footer{
+}
+
+/* common */
+button:hover {
+  text-shadow: var(--text-shadow);
+  color: #93f6ff;
+}
+
+footer {
   position: fixed;
   bottom: 25px;
   font-family: "Space Grotesk", sans-serif;
@@ -367,42 +418,43 @@ footer{
   box-shadow: inset 0 0 2px var(--blue-glow);
   backdrop-filter: blur(5px);
 }
-  @media (max-width: 767px) {
-    body {
-      height: 100%;
-      padding: 10px;
-      justify-content: center;
-    }
-    .container{
-      height: 100dvh;
-      padding: 8px;
-    }
-    .container .header{
-        font-size: 0.75rem;
-    }
 
-    .upload-container{
-      margin: 20px 0;
-    }
-
-    .table-section{
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      height: 100%;
-      width: 100%;
+@media (max-width: 767px) {
+  body {
+    height: 100%;
+    padding: 10px;
+    justify-content: center;
   }
-    .table-section .unfollowers, .table-section .mutalFollowers{
-      overflow-y: scroll;
-      scroll-behavior: smooth;
-      touch-action: pan-y;
-      pointer-events: all;
-      width: 100%;
+  .container {
+    height: 100dvh;
+    padding: 8px;
+  }
+  .container .header {
+    font-size: 0.75rem;
+  }
+
+  .upload-container {
+    margin: 20px 0;
+  }
+
+  .table-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    width: 100%;
+  }
+  .table-section .unfollowers,
+  .table-section .mutalFollowers {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    touch-action: pan-y;
+    pointer-events: all;
+    width: 100%;
   }
 
   tbody {
     height: 238px;
   }
-
-  }
+}

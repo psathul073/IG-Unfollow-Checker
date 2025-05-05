@@ -49,7 +49,7 @@ const FileUploader = ({setFollowers, setFollowing, selectFollowers, setSelectedF
         <label htmlFor="followingFile"><Icons name="file" className="icon" /> <p>{selectFollowing.status ? selectFollowing.name : "Following File"}</p></label>
         <input type="file" id="followingFile" accept=".json,.html" onChange={e => parseFile(e, "following")} />
     </div>
-    <button onClick={checkFollowers}>Check Followers</button>
+    <button className='btn-type-1' onClick={checkFollowers}>Check Followers</button>
 </div>
   )
 }

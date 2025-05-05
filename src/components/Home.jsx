@@ -162,7 +162,7 @@ function Home() {
             {isModalOpen && <Modal setIsModalOpen={setIsModalOpen} selectedUser={selectedUser} count={count} />}
 
            { showInstruction && <footer>
-                <p>Made with ❤️ By d9.coder</p>
+                <p>Made with ❤️ by d9.coder</p>
             </footer>}
         </section>
     );

@@ -3,7 +3,7 @@ import React from 'react'
 
 const Instructions = () => {
   return (
-    <div className='instruction'>
+    <div className='instruction panel-1'>
                 <h1> ? How to Get Your Instagram Followers, Following Data:</h1>
                 <ul>
                     <li># Go to your Instagram profile &gt; Settings &gt; “Your information and permissions”</li>
