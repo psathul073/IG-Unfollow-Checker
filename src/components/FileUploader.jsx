@@ -44,9 +44,9 @@ const FileUploader = ({setFollowers, setFollowing, selectFollowers, setSelectedF
   return (
     <div className='upload-container'>
     <div className='upload'>
-        <label htmlFor="followersFile"><Icons name="file" className="icon" /> <p>{selectFollowers.status ? selectFollowers.name : "Followers File"}</p></label>
+        <label className='panel-2' htmlFor="followersFile"><Icons name="file" className="icon" /> <p>{selectFollowers.status ? selectFollowers.name : "Followers File"}</p></label>
         <input type="file" id="followersFile" accept=".json,.html" onChange={e => parseFile(e, "followers")} />
-        <label htmlFor="followingFile"><Icons name="file" className="icon" /> <p>{selectFollowing.status ? selectFollowing.name : "Following File"}</p></label>
+        <label className='panel-2' htmlFor="followingFile"><Icons name="file" className="icon" /> <p>{selectFollowing.status ? selectFollowing.name : "Following File"}</p></label>
         <input type="file" id="followingFile" accept=".json,.html" onChange={e => parseFile(e, "following")} />
     </div>
     <button className='btn-type-1' onClick={checkFollowers}>Check Followers</button>

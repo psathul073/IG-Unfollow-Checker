@@ -17,4 +17,5 @@ const Icons = ({name, className}) =>{
     return icons[name]; 
 }
 
+
 export default Icons

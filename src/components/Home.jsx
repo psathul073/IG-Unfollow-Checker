@@ -22,10 +22,21 @@ function Home() {
    // Preload bg-img 
     useEffect( () => {
         const img = new Image();
+        const panelImg1 = new Image();
+        const btnImage = new Image();
         img.src = "https://i.postimg.cc/XvDvsF5V/bg.png";
+        panelImg1.src = "/border_main.png"
         img.onload = ()=> {
             document.body.classList.add("lazy-bg");
         };
+        panelImg1.onload = () =>{
+            document.querySelectorAll(".upload label")[0].classList.add("panel-2");
+            document.querySelectorAll(".upload label")[1].classList.add("panel-2");
+            document.querySelector(".container .instruction").classList.add("panel-1");
+        };
+        btnImage.onload = () =>{
+            document.querySelector(".upload-container button").classList.add("btn-type-1 ");
+        }
     },[]);
 
     function checkFollowers() {
